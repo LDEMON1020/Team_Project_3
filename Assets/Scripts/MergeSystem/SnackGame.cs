@@ -34,8 +34,7 @@ public class SnackGame : MonoBehaviour
     void Update()
     {
         //게임 오버면 종료
-        if (isGameOver)
-            return;
+       
 
         if(snackTimer >= 0 )                        //타이머가 0보다 클 경우
         snackTimer -= Time.deltaTime;

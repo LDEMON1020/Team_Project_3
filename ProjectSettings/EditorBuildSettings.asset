@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StageChoice.unity
     guid: 698d2a549b467284e8a9f522fd7d20a0
   - enabled: 1
-    path: Assets/Scenes/GamePlayScene(Sample).unity
+    path: Assets/Scenes/GamePlayScene(Shaking_Mod).unity
     guid: cd1a8c5d339e61147a12ade7d7b85354
+  - enabled: 1
+    path: Assets/Scenes/GamePlayScene(Normal_Mod).unity
+    guid: df116530ec8e9e5488b27c58d0c37dc3
   m_configObjects: {}
