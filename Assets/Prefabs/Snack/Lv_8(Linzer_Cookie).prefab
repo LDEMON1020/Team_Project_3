@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4788114140105485816}
   - component: {fileID: 7118208825954600194}
   - component: {fileID: 5248456862302653370}
+  - component: {fileID: 5685502346601223831}
   m_Layer: 0
   m_Name: Lv_8(Linzer_Cookie)
-  m_TagString: Untagged
+  m_TagString: Snack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,3 +164,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snackType: 7
   hasMerged: 0
+--- !u!114 &5685502346601223831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405814464143527764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731006faba5a99244abaa2bb177a1f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LineHit: 0
