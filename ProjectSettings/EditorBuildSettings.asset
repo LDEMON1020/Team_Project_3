@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlayScene(Normal_Mod).unity
     guid: df116530ec8e9e5488b27c58d0c37dc3
+  - enabled: 1
+    path: Assets/Scenes/GamePlayScene(Hp_Mod).unity
+    guid: 51df2a2698dfac142b16ff88bf448896
   m_configObjects: {}
