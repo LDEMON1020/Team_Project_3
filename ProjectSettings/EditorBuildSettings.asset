@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainmenuHelp.unity
     guid: b99411c37e820e64381f90a0c8402a54
   - enabled: 1
-    path: Assets/Scenes/StageChoice.unity
+    path: Assets/Scenes/ModChoice.unity
     guid: 698d2a549b467284e8a9f522fd7d20a0
   - enabled: 1
     path: Assets/Scenes/GamePlayScene(Shaking_Mod).unity
