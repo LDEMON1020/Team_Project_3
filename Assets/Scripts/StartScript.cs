@@ -18,7 +18,7 @@ public class StartScript : MonoBehaviour
 
     public void GameStart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GamePlayScene(Sample)");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("ModChoice");
     }
 
 }
