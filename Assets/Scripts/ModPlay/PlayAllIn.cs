@@ -15,4 +15,8 @@ public class PlayAllIn : MonoBehaviour
     {
         
     }
+    public void GoAllIn()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GamePlayScene(All_In_Mod)");
+    }
 }

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GamePlayScene(TimeAttack_Mod).unity
     guid: 61943a1fb9197534d943b279f8f70c51
   - enabled: 1
+    path: Assets/Scenes/GamePlayScene(All_In_Mod).unity
+    guid: 17e04aaa6e550e847b704ea8451f100c
+  - enabled: 1
     path: Assets/Scenes/ModChoice(All_In_Mod).unity
     guid: df3c995c41a471343aeb4cd45c453f83
   - enabled: 1
