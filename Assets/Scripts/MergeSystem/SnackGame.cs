@@ -26,6 +26,8 @@ public class SnackGame : MonoBehaviour
 
     public TextMeshProUGUI ScoreText;
 
+    public TextMeshProUGUI FinalText;
+
     public float score;
 
     // Start is called before the first frame update
@@ -86,6 +88,7 @@ public class SnackGame : MonoBehaviour
         }
 
         ScoreText.text = "" + score;
+        FinalText.text = "Score : " + score;
     }
 
     public void MergeSnacks(int snackType, Vector3 position)
@@ -126,6 +129,7 @@ public class SnackGame : MonoBehaviour
                 rb.gravityScale = 0f;
             }           
         }
+       
     }
 
     public void GameOver()
