@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ff2e46aa42171439cf21c36310effe, type: 3}
   m_Name: Level_14 JellyBean Upgraded
   m_EditorClassIdentifier: 
-  point: 100
+  point: 375
