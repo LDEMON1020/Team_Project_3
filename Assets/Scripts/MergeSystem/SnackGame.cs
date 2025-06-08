@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class SnackGame : MonoBehaviour
@@ -16,10 +17,11 @@ public class SnackGame : MonoBehaviour
     public float gameWidth = 5f;                     //게임판 정도
 
     public bool isGameOver = false;                 //게임 상태
+    public GameObject GameOverBlackPanel;
+    
     public Camera mainCamera;                       //카메라 참조(마우스 위치 변환에 필요)
 
-    public float snackTimer;                        //잰 시간 설정을 위한 타이머
-
+    public float snackTimer;              //잰 시간 설정을 위한 타이머
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,14 @@ public class SnackGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //게임 오버면 종료
-       
+        if (isGameOver)
+        {
+            GameOver();
+            return;
+        }//게임 오버면 종료
 
-        if(snackTimer >= 0 )                        //타이머가 0보다 클 경우
+
+        if (snackTimer >= 0 )                        //타이머가 0보다 클 경우
         snackTimer -= Time.deltaTime;
 
         if(snackTimer < 0 && snackTimer > -2)       //타이머 시간이 0 과 - 2 사이에 있을때 잰을 하고
@@ -108,8 +114,14 @@ public class SnackGame : MonoBehaviour
             if (rb != null)
             {
                 rb.gravityScale = 0f;
-            }
+            }           
         }
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;        
+        GameOverBlackPanel.SetActive(true);
     }
 
     void DropSnack()
