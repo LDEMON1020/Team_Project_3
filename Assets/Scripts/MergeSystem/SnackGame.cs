@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using UnityEngine;
 
 public class SnackGame : MonoBehaviour
@@ -23,6 +24,10 @@ public class SnackGame : MonoBehaviour
 
     public float snackTimer;              //잰 시간 설정을 위한 타이머
 
+    public TextMeshProUGUI ScoreText;
+
+    public float score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +36,10 @@ public class SnackGame : MonoBehaviour
         SpawnNewSnack();                    //게임 시작 시 첫 과자 생성
         snackTimer = -3.0f;                 //타이머 시간을 -3으로 보낸다
     }
-
+    private void Awake()
+    {
+        score = 0f;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -76,17 +84,19 @@ public class SnackGame : MonoBehaviour
         {
             DropSnack();
         }
+
+        ScoreText.text = "" + score;
     }
 
     public void MergeSnacks(int snackType, Vector3 position)
     {
-        if(snackType < snackPrefabs.Length -1)          //마지막 과자 타입이 아니라면
+        if (snackType < snackPrefabs.Length - 1)          
         {
-            GameObject newSnack = Instantiate(snackPrefabs[snackType + 1], position, Quaternion.identity); //다음 단계 과자 생성
-                                                                                                           //
+            GameObject newSnack = Instantiate(snackPrefabs[snackType + 1], position, Quaternion.identity); 
+                                                                                                           
             newSnack.transform.localScale = new Vector3(snackSizes[snackType + 1], snackSizes[snackType + 1], 1.0f);
 
-            //점수 추가 로직
+           
         }
     }
 

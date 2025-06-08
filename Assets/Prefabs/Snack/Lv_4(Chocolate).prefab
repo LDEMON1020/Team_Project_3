@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7118208825954600194}
   - component: {fileID: 5248456862302653370}
   - component: {fileID: -7578640079243604135}
+  - component: {fileID: -3606184890332768730}
   m_Layer: 0
   m_Name: Lv_4(Chocolate)
   m_TagString: Snack
@@ -177,3 +178,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LineHit: 0
+--- !u!114 &-3606184890332768730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405814464143527764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb068d3272cc8b448aa419013d95429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e780f761d511f284ea3957d545b96fc9, type: 2}

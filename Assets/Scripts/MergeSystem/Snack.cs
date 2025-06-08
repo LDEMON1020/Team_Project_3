@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Snack : MonoBehaviour              //과자 오브젝트에 부착되는 스크립트
 {
+    SnackGame gameManager = FindObjectOfType<SnackGame>();
+
+    public float score;
 
     //과자 타입을 int로 만든다 
     public int snackType;
@@ -34,7 +40,14 @@ public class Snack : MonoBehaviour              //과자 오브젝트에 부착되는 스크�
             SnackGame gameManager = FindObjectOfType<SnackGame>();
             if(gameManager != null )
             {
-                gameManager.MergeSnacks(snackType,mergePosition);       //SnackGame에서의 Merge 함수를 실행 시킨다.
+                gameManager.MergeSnacks(snackType,mergePosition);
+
+                ItemObject item = collision.gameObject.GetComponent<ItemObject>();
+
+                if (gameManager != null)
+                {
+                    gameManager.score += item.GetPoint(); 
+                }
             }
 
             //기존 과자 제거
@@ -43,5 +56,4 @@ public class Snack : MonoBehaviour              //과자 오브젝트에 부착되는 스크�
 
         }
     }
-
 }
