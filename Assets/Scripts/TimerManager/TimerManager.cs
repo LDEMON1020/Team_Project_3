@@ -11,6 +11,8 @@ public class TimerManager : MonoBehaviour
 
     private float CurrentTime;
     public float totalTime = 180f;
+
+    private SnackGame snackGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,8 @@ public class TimerManager : MonoBehaviour
 
         Timer.maxValue = totalTime;
         Timer.value = totalTime;
+
+        snackGame = FindObjectOfType<SnackGame>();
     }
 
     // Update is called once per frame
@@ -37,12 +41,7 @@ public class TimerManager : MonoBehaviour
         
         if (CurrentTime <= 0f)
         {
-            GameOver();
+            snackGame.isGameOver = true;
         }
-    }
-
-    void GameOver()
-    {
-
     }
 }

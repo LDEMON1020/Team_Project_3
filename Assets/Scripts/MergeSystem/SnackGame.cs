@@ -35,7 +35,7 @@ public class SnackGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGameOver)
+        if (isGameOver == true)
         {
             GameOver();
             return;

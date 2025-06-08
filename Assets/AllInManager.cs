@@ -13,6 +13,10 @@ public class AllInManager : MonoBehaviour
 
     private float CurrentTime;
     public float totalTime = 180f;
+
+    private SnackGame snackGame;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,8 @@ public class AllInManager : MonoBehaviour
 
         Timer.maxValue = totalTime;
         Timer.value = totalTime;
+
+        snackGame = FindObjectOfType<SnackGame>();
     }
 
     void Update()
@@ -40,9 +46,9 @@ public class AllInManager : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
         UpdateHPUI();
 
-        if (currentHP < 0f)
+        if (currentHP <= 0f)
         {
-            GameOver();
+            snackGame.isGameOver = true;
         }
     }
 
@@ -53,7 +59,7 @@ public class AllInManager : MonoBehaviour
 
         if (CurrentTime <= 0f)
         {
-            GameOver();
+            snackGame.isGameOver = true;
         }
     }
 
@@ -63,8 +69,5 @@ public class AllInManager : MonoBehaviour
             Hp.value = currentHP;
     }
 
-    void GameOver()
-    {
-        //게임오버 판넬 띄우기 이동 ( 아직 구현 X )
-    }
+ 
 }

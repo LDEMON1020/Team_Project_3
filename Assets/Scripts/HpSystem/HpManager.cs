@@ -10,6 +10,7 @@ public class HpManager : MonoBehaviour
 
     private float maxHP = 1.0f;
     private float currentHP;
+    private SnackGame snackGame;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class HpManager : MonoBehaviour
         currentHP = maxHP;
         UpdateHPUI();
 
+        snackGame = FindObjectOfType<SnackGame>();
     }
 
     public void DecreaseHP(float bar)     //bar = 체력바
@@ -25,9 +27,9 @@ public class HpManager : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
         UpdateHPUI();
 
-        if (currentHP < 0f)
+        if (currentHP <= 0f)
         {
-            GameOver();
+            snackGame.isGameOver = true;
         }
     }
 
@@ -37,10 +39,7 @@ public class HpManager : MonoBehaviour
             Hp.value = currentHP;
     }
 
-    void GameOver()
-    {
-        //게임오버 판넬 띄우기 이동 ( 아직 구현 X )
-    }
+  
 
     // Update is called once per frame
     void Update()
