@@ -99,7 +99,13 @@ public class SnackGame : MonoBehaviour
                                                                                                            
             newSnack.transform.localScale = new Vector3(snackSizes[snackType + 1], snackSizes[snackType + 1], 1.0f);
 
-           
+            // 자동으로 떨어진 상태로 간주
+            Snack snackScript = newSnack.GetComponent<Snack>();
+            if (snackScript != null)
+            {
+                snackScript.hasDropped = true;
+            }
+
         }
     }
 
@@ -140,14 +146,22 @@ public class SnackGame : MonoBehaviour
 
     void DropSnack()
     {
+        if (currentSnack == null) return;
+
         Rigidbody2D rb = currentSnack.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.gravityScale = 1f;
-
-            currentSnack = null;                //현재 들고 있는 과일 해제
-
-            snackTimer = 1.0f;
         }
+
+        //  떨어뜨릴 때만 hasDropped = true 설정
+        Snack snackScript = currentSnack.GetComponent<Snack>();
+        if (snackScript != null)
+        {
+            snackScript.hasDropped = true;
+        }
+
+        currentSnack = null;
+        snackTimer = 1.0f;
     }
 }
