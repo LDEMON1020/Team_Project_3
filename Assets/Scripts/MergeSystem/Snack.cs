@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Snack : MonoBehaviour              //과자 오브젝트에 부착되는 스크립트
 {
-    SnackGame gameManager = FindObjectOfType<SnackGame>();
+    
 
     public float score;
 
