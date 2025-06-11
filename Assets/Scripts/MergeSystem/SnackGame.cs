@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SnackGame : MonoBehaviour
 {
@@ -140,7 +141,8 @@ public class SnackGame : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0f;        
+        Time.timeScale = 0f;
+        HighScore.Tryset(SceneManager.GetActiveScene().buildIndex, (int)score);
         GameOverBlackPanel.SetActive(true);
     }
 
