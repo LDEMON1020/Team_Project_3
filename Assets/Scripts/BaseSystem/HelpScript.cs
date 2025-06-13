@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class HelpScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void GameMainHelp()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void GameHelp()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainmenuHelp");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainmenuHelp1");
     }
 
 }

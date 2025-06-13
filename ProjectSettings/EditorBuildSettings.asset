@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMainmenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/MainmenuHelp1.unity
+    guid: dc386d69056088c449d984c4acd36ebf
+  - enabled: 1
+    path: Assets/Scenes/MainmenuHelp2.unity
+    guid: c57ad4546a1749744b378ac5ebecbd0c
+  - enabled: 1
     path: Assets/Scenes/MainmenuHelp3.unity
     guid: b99411c37e820e64381f90a0c8402a54
+  - enabled: 1
+    path: Assets/Scenes/MainmenuHelp4.unity
+    guid: f014a739899d69149a2b6c4442dd17e4
+  - enabled: 1
+    path: Assets/Scenes/MainmenuHelp5.unity
+    guid: b6b03439043624e498fc968d120dc945
   - enabled: 1
     path: Assets/Scenes/GamePlayScene(Normal_Mod).unity
     guid: df116530ec8e9e5488b27c58d0c37dc3
