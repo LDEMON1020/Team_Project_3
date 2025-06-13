@@ -53,4 +53,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ModChoice(TimeAttack_Mod).unity
     guid: 30d6a7645ad88eb4ca3709f31329d9b3
+  - enabled: 1
+    path: Assets/Scenes/NormalMenuHelp1.unity
+    guid: 6b45777e0bd903d49a750226062792ae
+  - enabled: 1
+    path: Assets/Scenes/NormalMenuHelp2.unity
+    guid: e53a876715901e1478edfe79c9fd1765
+  - enabled: 1
+    path: Assets/Scenes/NormalMenuHelp3.unity
+    guid: d633e77e9a0914443899bc8e89d80db5
+  - enabled: 1
+    path: Assets/Scenes/NormalMenuHelp4.unity
+    guid: 6bb6cad2c37deee4ca0fa75427c4cdcf
   m_configObjects: {}
