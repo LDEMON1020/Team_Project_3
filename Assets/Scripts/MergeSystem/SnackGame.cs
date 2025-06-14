@@ -31,6 +31,8 @@ public class SnackGame : MonoBehaviour
 
     public float score;
 
+    private bool canDrop = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,13 +85,34 @@ public class SnackGame : MonoBehaviour
 
         }
         //마우스를 좌 클릭하면 과자 떨어뜨리기
-        if(Input.GetMouseButtonDown(0) && snackTimer == -3.0f)
+        if(Input.GetMouseButtonDown(0) && snackTimer == -3.0f && canDrop && Time.timeScale == 1f)
         {
             DropSnack();
         }
 
         ScoreText.text = "" + score;
         FinalText.text = "Score : " + score;
+
+        if (currentSnack != null)
+        {
+            Vector3 mousePostion = Input.mousePosition;
+            Vector3 worldPoision = mainCamera.ScreenToWorldPoint(mousePostion);
+
+            Vector3 newPosition = currentSnack.transform.position;
+            newPosition.x = worldPoision.x;
+
+            float halfSnackSize = snackSizes[currentSnackType] / 2f;
+            float minX = -gameWidth / 2 + halfSnackSize;
+            float maxX = gameWidth / 2 - halfSnackSize;
+
+            // 마우스가 범위를 벗어났는지 검사
+            canDrop = (worldPoision.x >= minX && worldPoision.x <= maxX);
+
+            // newPosition.x를 Clamp하여 경계 안으로만 움직이게
+            newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
+
+            currentSnack.transform.position = newPosition;
+        }
     }
 
     public void MergeSnacks(int snackType, Vector3 position)
