@@ -33,6 +33,9 @@ public class SnackGame : MonoBehaviour
 
     private bool canDrop = true;
 
+    public AudioClip mergeSound;
+
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +43,8 @@ public class SnackGame : MonoBehaviour
 
         SpawnNewSnack();                    //게임 시작 시 첫 과자 생성
         snackTimer = -3.0f;                 //타이머 시간을 -3으로 보낸다
+
+        audioSource = GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -188,5 +193,13 @@ public class SnackGame : MonoBehaviour
 
         currentSnack = null;
         snackTimer = 1.0f;
+    }
+
+    public void PlayMergeSound()
+    {
+        if (audioSource != null && mergeSound != null)
+        {
+            audioSource.PlayOneShot(mergeSound);
+        }
     }
 }

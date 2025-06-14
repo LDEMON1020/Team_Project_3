@@ -42,6 +42,7 @@ public class Snack : MonoBehaviour              //과자 오브젝트에 부착되는 스크�
             if(gameManager != null )
             {
                 gameManager.MergeSnacks(snackType,mergePosition);
+                gameManager.PlayMergeSound();  // ← 여기에서 사운드 재생
 
                 ItemObject item = collision.gameObject.GetComponent<ItemObject>();
 
@@ -57,4 +58,5 @@ public class Snack : MonoBehaviour              //과자 오브젝트에 부착되는 스크�
 
         }
     }
+
 }
