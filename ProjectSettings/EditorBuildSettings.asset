@@ -65,4 +65,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NormalMenuHelp4.unity
     guid: 6bb6cad2c37deee4ca0fa75427c4cdcf
+  - enabled: 1
+    path: Assets/Scenes/ShakingMenuHelp1.unity
+    guid: e0d7fe6e68915c84da6fe5b1a587f152
+  - enabled: 1
+    path: Assets/Scenes/ShakingMenuHelp2.unity
+    guid: 54d448c3696258a49aff5f16eeb8a1d6
+  - enabled: 1
+    path: Assets/Scenes/ShakingMenuHelp3.unity
+    guid: 10eed4d3e5b2fbc42ba7cb2a2d5164fc
+  - enabled: 1
+    path: Assets/Scenes/ShakingMenuHelp4.unity
+    guid: cfa08186dbc91db41a508ee90aa8ab46
+  - enabled: 1
+    path: Assets/Scenes/ShakingMenuHelp5.unity
+    guid: 314dc1e3bcce41a43a21b78b19a5904d
   m_configObjects: {}

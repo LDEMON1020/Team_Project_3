@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ public class AllInManager : MonoBehaviour
     public float totalTime = 180f;
 
     private SnackGame snackGame;
+
+    public TextMeshProUGUI GameOverText;
 
 
     // Start is called before the first frame update
@@ -38,6 +41,10 @@ public class AllInManager : MonoBehaviour
             CurrentTime -= Time.deltaTime;
             Timer.value = CurrentTime;
         }
+        if (CurrentTime <= 0 && !snackGame.isGameOver)
+        {
+            snackGame.isGameOver = true;
+        }
     }
 
     public void DecreaseHP(float bar)     //bar = 체력바
@@ -45,11 +52,6 @@ public class AllInManager : MonoBehaviour
         currentHP -= bar;
         currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
         UpdateHPUI();
-
-        if (currentHP <= 0f)
-        {
-            snackGame.isGameOver = true;
-        }
     }
 
     public void DecreaseTime(float bar)     //bar = 체력바

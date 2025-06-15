@@ -10,7 +10,7 @@ public class TimerManager : MonoBehaviour
     public Image fillImage;
 
     private float CurrentTime;
-    public float totalTime = 180f;
+    public float totalTime = 180;
 
     private SnackGame snackGame;
     // Start is called before the first frame update
@@ -32,16 +32,16 @@ public class TimerManager : MonoBehaviour
             CurrentTime -= Time.deltaTime;
             Timer.value = CurrentTime;
         }
+
+        if (CurrentTime <= 0 && !snackGame.isGameOver)
+        {
+            snackGame.isGameOver = true;
+        }
     }
 
     public void DecreaseTime(float bar)     //bar = Ã¼·Â¹Ù
     {
         CurrentTime -= bar;
         CurrentTime = Mathf.Clamp(CurrentTime, 0f, totalTime);
-        
-        if (CurrentTime <= 0f)
-        {
-            snackGame.isGameOver = true;
-        }
     }
 }
