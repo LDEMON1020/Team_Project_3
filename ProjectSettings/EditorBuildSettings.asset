@@ -9,21 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMainmenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/MainmenuHelp1.unity
-    guid: dc386d69056088c449d984c4acd36ebf
-  - enabled: 1
-    path: Assets/Scenes/MainmenuHelp2.unity
-    guid: c57ad4546a1749744b378ac5ebecbd0c
-  - enabled: 1
-    path: Assets/Scenes/MainmenuHelp3.unity
-    guid: b99411c37e820e64381f90a0c8402a54
-  - enabled: 1
-    path: Assets/Scenes/MainmenuHelp4.unity
-    guid: f014a739899d69149a2b6c4442dd17e4
-  - enabled: 1
-    path: Assets/Scenes/MainmenuHelp5.unity
-    guid: b6b03439043624e498fc968d120dc945
-  - enabled: 1
     path: Assets/Scenes/GamePlayScene(Normal_Mod).unity
     guid: df116530ec8e9e5488b27c58d0c37dc3
   - enabled: 1
@@ -54,18 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ModChoice(TimeAttack_Mod).unity
     guid: 30d6a7645ad88eb4ca3709f31329d9b3
   - enabled: 1
-    path: Assets/Scenes/NormalMenuHelp1.unity
-    guid: 6b45777e0bd903d49a750226062792ae
-  - enabled: 1
-    path: Assets/Scenes/NormalMenuHelp2.unity
-    guid: e53a876715901e1478edfe79c9fd1765
-  - enabled: 1
-    path: Assets/Scenes/NormalMenuHelp3.unity
-    guid: d633e77e9a0914443899bc8e89d80db5
-  - enabled: 1
-    path: Assets/Scenes/NormalMenuHelp4.unity
-    guid: 6bb6cad2c37deee4ca0fa75427c4cdcf
-  - enabled: 1
     path: Assets/Scenes/ShakingMenuHelp1.unity
     guid: e0d7fe6e68915c84da6fe5b1a587f152
   - enabled: 1
@@ -95,4 +68,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HPMenuHelp5.unity
     guid: f62a97b4d89c2204cb1ffce4281404eb
+  - enabled: 1
+    path: Assets/Scenes/TimeMenuScene1.unity
+    guid: ea5d428e25083ad4a9c052a64a9dc77f
+  - enabled: 1
+    path: Assets/Scenes/TimeMenuScene2.unity
+    guid: ed195f58acca5e14fa4040dc72a1177e
+  - enabled: 1
+    path: Assets/Scenes/TimeMenuScene3.unity
+    guid: 414eeab7a8943a442a9fceea571d9494
+  - enabled: 1
+    path: Assets/Scenes/TimeMenuScene4.unity
+    guid: aa0dd280f1b7abe46830b0ea2b3f090b
+  - enabled: 1
+    path: Assets/Scenes/All_InMenuScene1.unity
+    guid: c7553ae9a4023964c9b4c3ac3a08f274
+  - enabled: 1
+    path: Assets/Scenes/All_InMenuScene2.unity
+    guid: 493666a36afa8ae4d8be793236af3659
+  - enabled: 1
+    path: Assets/Scenes/All_InMenuScene3.unity
+    guid: 4c0d0c83887a6ff49be13353e65aa33c
+  - enabled: 1
+    path: Assets/Scenes/All_InMenuScene4.unity
+    guid: 2129ccc740af8a74e88cff7d3a842adb
   m_configObjects: {}
