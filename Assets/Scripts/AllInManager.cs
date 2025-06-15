@@ -41,10 +41,12 @@ public class AllInManager : MonoBehaviour
             CurrentTime -= Time.deltaTime;
             Timer.value = CurrentTime;
         }
-        if (CurrentTime <= 0 && !snackGame.isGameOver)
+        else if (CurrentTime <= 0 && !snackGame.isGameOver)
         {
             snackGame.isGameOver = true;
+            GameOverText.text = "타이머의 시간이 다 지났습니다.";
         }
+       
     }
 
     public void DecreaseHP(float bar)     //bar = 체력바
@@ -52,17 +54,18 @@ public class AllInManager : MonoBehaviour
         currentHP -= bar;
         currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
         UpdateHPUI();
+
+        if (currentHP == 0 && !snackGame.isGameOver)
+        {
+            snackGame.isGameOver = true;
+            GameOverText.text = "HP가 0이 되었습니다.";
+        }
     }
 
     public void DecreaseTime(float bar)     //bar = 체력바
     {
         CurrentTime -= bar;
         CurrentTime = Mathf.Clamp(CurrentTime, 0f, totalTime);
-
-        if (CurrentTime <= 0f)
-        {
-            snackGame.isGameOver = true;
-        }
     }
 
     void UpdateHPUI()
