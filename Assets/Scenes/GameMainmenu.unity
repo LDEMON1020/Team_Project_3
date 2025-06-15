@@ -2003,7 +2003,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1715020123}
         m_TargetAssemblyTypeName: HelpScript, Assembly-CSharp
-        m_MethodName: GameHelp
+        m_MethodName: GameMainHelp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
